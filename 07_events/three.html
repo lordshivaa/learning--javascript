@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello duniya javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>    
+
+    let intervalID;
+
+    const sayDate = function(){
+        console.log("time start", Date.now());
+    }
+
+    function startCounting(){
+        intervalID = setInterval(sayDate, 1000)
+    }
+
+    function stopCounting (){
+        clearInterval(intervalID)
+    }
+
+    document.querySelector('#start').addEventListener('click', startCounting)
+    document.querySelector('#stop').addEventListener('click', stopCounting)
+
+
+
+</script>
+</html> 
